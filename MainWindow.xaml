@@ -1,0 +1,24 @@
+﻿<Window x:Class="Vosimerka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vosimerka"
+        mc:Ignorable="d"
+        Title="Восьмерка" Height="450" Width="800" Icon="C:\Users\Admin\OneDrive\Рабочий стол\Восьмёрка\Восьмерка.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Image Source="C:\Users\Admin\OneDrive\Рабочий стол\Восьмёрка\Восьмерка.png" HorizontalAlignment="Left"></Image>
+            <Button Click="navigateToProduct" Width="150" Height="35" Background="Transparent" BorderBrush="Transparent">
+                <Button.Content>
+                    <TextBlock>Продукция</TextBlock>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+        <Frame Grid.Row="1" Name="frame"></Frame>
+    </Grid>
+</Window>

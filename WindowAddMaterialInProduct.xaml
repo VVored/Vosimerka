@@ -1,0 +1,29 @@
+﻿<Window x:Class="Vosimerka.WindowAddMaterialInProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vosimerka"
+        mc:Ignorable="d"
+        Title="WindowAddMaterialInProduct" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="dgMaterials" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*" Grid.Row="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название материала" Binding="{Binding Material.Title}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество материала в товаре" Binding="{Binding Count}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Background="#A163F5" Click="deleteMaterial" BorderBrush="Transparent" Foreground="White">Удалить</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Background="#A163F5" Click="addMaterial" BorderBrush="Transparent" Foreground="White" Grid.Row="1" Width="150" Height="40">Добавить</Button>
+    </Grid>
+</Window>
